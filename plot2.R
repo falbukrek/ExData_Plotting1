@@ -35,7 +35,7 @@ plotdata <- subset(consumption, Date == dmy("1/2/2007") | Date == dmy("2/2/2007"
 # start the png file
 png("plot2.png")
 
-# plot the histogram to display
+# plot the line graph
 plot(plotdata$DateTime, plotdata$Global_active_power, 
      type = "l", 
      ylab = "Global Active Power (kilowatts)", 
