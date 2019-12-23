@@ -32,3 +32,18 @@ consumption$Sub_metering_3 <- as.numeric(consumption$Sub_metering_3)
 # subset the data to the 2007-02-01 and 2007-02-02
 plotdata <- subset(consumption, Date == dmy("1/2/2007") | Date == dmy("2/2/2007"))
 
+# start the png file
+png("plot1.png")
+
+# plot the histogram to display
+hist(plotdata$Global_active_power,
+     main = "Global Active Power", 
+     xlab = "Global Active Power (kilowatts)", 
+     col = "red")
+
+# close the png file
+dev.off()
+
+
+
+
